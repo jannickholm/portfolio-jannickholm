@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prebuild": "shx rm -rf dist/*",
-    "build": "parcel build src/index.html --public-url ./"
+    "build": "parcel build index.html --public-url ./"
   },
   "repository": {
     "type": "git",
