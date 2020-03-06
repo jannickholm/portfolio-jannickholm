@@ -1,0 +1,54 @@
+#get__in__touch {
+	padding-top: 6em;
+	width: 100vw - 5vw;
+	margin: auto;
+	margin-bottom: 5em;
+
+	h1 {
+		font-family: $font;
+		font-weight: $regular;
+		font-size: $responsive__font;
+		--max-font: 80;
+		--min-font: 60;
+		text-transform: lowercase;
+		width: 80vw;
+		margin: auto;
+
+		span {
+			font-weight: $bold;
+		}
+
+		.half-bg {
+			background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+			background-origin: 0;
+			background-size: 200% 40%;
+			background-repeat: repeat-x;
+			background-position: -100% 100%;
+			transition: background-position 0.5s;
+		}
+	}
+
+	h5 {
+		font-family: $font;
+		font-weight: $regular;
+		font-size: $responsive__font;
+		--max-font: 50;
+		--min-font: 50;
+		text-transform: lowercase;
+		width: 80vw;
+		margin: auto;
+
+		span {
+			font-weight: $bold;
+		}
+
+		.half-bg {
+			background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+			background-origin: 0;
+			background-size: 200% 40%;
+			background-repeat: repeat-x;
+			background-position: -100% 100%;
+			transition: background-position 0.5s;
+		}
+	}
+}

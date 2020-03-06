@@ -1,0 +1,28 @@
+@font-face {
+	font-family: 'Brown';
+	font-display: swap;
+	src: url('Brown-Regular.eot');
+	src: local('Brown-Regular'), url('Brown-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Brown-Regular.woff') format('woff'), url('Brown-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Brown';
+	font-display: swap;
+	src: url('Brown-Bold.eot');
+	src: local('Brown-Bold'), url('Brown-Bold.eot?#iefix') format('embedded-opentype'),
+		url('Brown-Bold.woff') format('woff'), url('Brown-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Oxygen+Mono&display=swap');
+
+$font: 'Brown';
+$regular: normal;
+$bold: bold;
+$responsive__font: calc(
+	 (var(--min-font) * 1px) + (var(--max-font) - var(--min-font)) * ((100vw - 420px) / (1200 - 420))
+);

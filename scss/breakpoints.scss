@@ -1,0 +1,44 @@
+//Laptop L 1024px
+$screen-lg: 1024px;
+@mixin lg {
+	@media (max-width: #{$screen-lg}) {
+		@content;
+	}
+}
+//Laptop L end
+
+//Tablet - Landscape 768px
+$screen-tb: 768px;
+@mixin tb {
+	@media (max-width: #{$screen-tb}) {
+		@content;
+	}
+}
+//Tablet - Landscape end
+
+//Mobile L 425px
+$screen-ml: 425px;
+@mixin ml {
+	@media (max-width: #{$screen-ml}) {
+		@content;
+	}
+}
+//Mobile L end
+
+//Mobile m 375px
+$screen-mm: 375px;
+@mixin mm {
+	@media (max-width: #{$screen-mm}) {
+		@content;
+	}
+}
+//Mobile s end
+
+//Mobile s 425px
+$screen-ms: 320px;
+@mixin ms {
+	@media (max-width: #{$screen-ms}) {
+		@content;
+	}
+}
+//Mobile s end

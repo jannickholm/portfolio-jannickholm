@@ -1,0 +1,500 @@
+#my__work {
+	padding-top: 6em;
+	width: 100vw - 5vw;
+	margin: auto;
+	margin-bottom: 5em;
+
+	h1 {
+		font-family: $font;
+		font-weight: $regular;
+		font-size: $responsive__font;
+		--max-font: 80;
+		--min-font: 60;
+		text-transform: lowercase;
+		width: 80vw;
+		margin: auto;
+
+		span {
+			font-weight: $bold;
+		}
+
+		.half-bg {
+			background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+			background-origin: 0;
+			background-size: 200% 40%;
+			background-repeat: repeat-x;
+			background-position: -100% 100%;
+			transition: background-position 0.5s;
+		}
+	}
+
+	.portfolio {
+		font-family: $font;
+		margin-top: 5em;
+
+		@include ml {
+			margin-top: 0;
+		}
+
+		.project:hover {
+			.picture img {
+				transform: scale(1.2);
+				transition: 0.4s ease-in-out;
+			}
+		}
+
+		.project {
+			box-shadow: 0 1rem 2.8rem 0 rgba(0, 0, 0, .15);
+			padding: 1em;
+			width: max-content;
+			max-width: 100%;
+			position: relative;
+
+			.number {
+				font-size: $responsive__font;
+				--max-font: 120;
+				--min-font: 70;
+			}
+		}
+
+		.project:nth-child(odd) {
+			margin-top: 5em;
+			display: grid;
+			grid-template-columns: 50% 50%;
+
+			.tec {
+				display: block;
+				width: max-content;
+				margin: 1em 1.4em;
+				@include tb {
+					margin-left: 0;
+				}
+			}
+
+			//768 px
+			@include tb {
+				display: block;
+				margin: auto;
+				margin-top: 4em;
+			}
+
+			@include ml {
+				width: 300px;
+				margin: auto;
+				margin-top: 2em;
+			}
+
+			@include ms {
+				width: 250px;
+			}
+
+			.number {
+				position: absolute;
+				color: transparent;
+				-webkit-text-stroke-color: black;
+				-webkit-text-stroke-width: .01em;
+				right: -.4em;
+				top: -.3em;
+				z-index: 99;
+				opacity: .5;
+
+				//1024px
+				@include lg {
+					right: 0em;
+				}
+
+				@include tb {
+					right: -.4em;
+				}
+
+				@include mm {
+					right: 0em;
+				}
+			}
+
+			&:nth-child(3) .number {
+				position: absolute;
+				color: transparent;
+				-webkit-text-stroke-color: black;
+				-webkit-text-stroke-width: .01em;
+				right: -.4em;
+				top: -.3em;
+				z-index: 99;
+				opacity: .5;
+				//1024px
+				@include lg {
+					right: 0em;
+				}
+
+				@include tb {
+					right: -.4em;
+				}
+				@include mm {
+					right: 0em;
+				}
+			}
+
+			.picture {
+				grid-column-end: 1;
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+
+				@include tb {
+					width: 400px;
+					height: 400px;
+					margin: auto;
+				}
+
+				@include ml {
+					width: 300px;
+					height: 300px;
+					margin: auto;
+				}
+
+				@include ms {
+					width: 250px;
+					height: 250px;
+				}
+
+				img {
+					width: 100%;
+					object-fit: fill;
+					transition: 0.4s ease-in-out;
+				}
+			}
+
+			&:nth-child(3) .picture img {
+				object-position: bottom;
+			}
+
+			.text {
+				height: auto;
+				margin-top: auto;
+				margin-bottom: auto;
+				line-height: 1.2;
+
+				//768px
+				@include tb {
+					margin-top: 2em;
+					margin-bottom: 2em;
+					width: 400px;
+				}
+
+				h1 {
+					position: relative;
+					margin-left: -1.5em;
+					display: inline;
+					z-index: 2;
+					font-size: $responsive__font;
+					--max-font: 80;
+					--min-font: 40;
+
+					//768px
+					@include tb {
+						margin-left: 0;
+					}
+				}
+
+				p {
+					max-width: 400px;
+					font-size: $responsive__font;
+					--max-font: 20;
+					--min-font: 16;
+					margin: .5em 1em;
+					margin-bottom: 1.5em;
+					opacity: .7;
+					@include tb {
+						margin-left: 0;
+						margin-top: 1em;
+						margin-bottom: 2em;
+					}
+
+					@include ml {
+						max-width: 300px;
+					}
+
+					@include ms {
+						max-width: 250px;
+					}
+				}
+				span {
+					background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+					background-origin: 0;
+					background-size: 200% 40%;
+					background-repeat: repeat-x;
+					background-position: -100% 100%;
+					transition: background-position 0.5s;
+					font-weight: $bold;
+				}
+				a {
+					font-family: $font;
+					color: black;
+					margin: 5em 1.6em;
+					background: #ffc600;
+					padding: 1em 2em;
+					@include tb {
+						margin-left: 0;
+					}
+					@include ml {
+						padding: .5em 1em;
+					}
+				}
+			}
+		}
+
+		.project:nth-child(even) {
+			margin-top: 5em;
+			display: grid;
+			justify-items: flex-end;
+			grid-template-columns: 50% 50%;
+			margin-left: auto;
+
+			.tec {
+				display: block;
+				width: max-content;
+				margin: 1em 2.8em;
+				margin-left: auto;
+				margin-bottom: 1.5em;
+
+				@include tb {
+					margin-left: 0;
+				}
+			}
+
+			//768 px
+			@include tb {
+				display: flex;
+				flex-direction: column;
+				margin: auto;
+				margin-top: 4em;
+			}
+
+			//425px
+			@include ml {
+				width: 300px;
+				margin: auto;
+				margin-top: 2em;
+			}
+
+			@include ms {
+				width: 250px;
+			}
+
+			& .number {
+				position: absolute;
+				color: transparent;
+				-webkit-text-stroke-color: black;
+				-webkit-text-stroke-width: .01em;
+				left: -.4em;
+				top: -.3em;
+				z-index: 99;
+				opacity: .5;
+
+				//1024px
+				@include lg {
+					left: 0em;
+				}
+
+				@include tb {
+					left: -.4em;
+				}
+
+				@include mm {
+					left: 0em;
+				}
+			}
+
+			&:nth-child(4) .number {
+				position: absolute;
+				color: transparent;
+				-webkit-text-stroke-color: black;
+				-webkit-text-stroke-width: .01em;
+				left: -.4em;
+				top: -.3em;
+				z-index: 99;
+				opacity: .5;
+
+				//1024px
+				@include lg {
+					left: 0em;
+				}
+
+				@include tb {
+					left: -.4em;
+				}
+
+				@include mm {
+					left: 0em;
+				}
+			}
+
+			.picture {
+				order: 1;
+				grid-column-end: 3;
+				width: 500px;
+				height: 500px;
+				overflow: hidden;
+
+				@include tb {
+					order: -1;
+					width: 400px;
+					height: 400px;
+					margin: auto;
+				}
+
+				@include ml {
+					width: 300px;
+					height: 300px;
+					margin: auto;
+				}
+
+				@include ms {
+					width: 250px;
+					height: 250px;
+				}
+
+				img {
+					z-index: -1;
+					height: 100%;
+					object-fit: fill;
+					transition: 0.4s ease-in-out;
+				}
+			}
+
+			.text {
+				grid-column-end: 2;
+				text-align: right;
+				height: auto;
+				margin-top: auto;
+				margin-bottom: auto;
+				line-height: 1.2;
+
+				//768px
+				@include tb {
+					margin-top: 2em;
+					margin-bottom: 2em;
+					width: 400px;
+					text-align: left;
+				}
+
+				h1 {
+					position: relative;
+					z-index: 2;
+					margin-right: -1em;
+					display: inline;
+					font-size: $responsive__font;
+					--max-font: 80;
+					--min-font: 40;
+					//768px
+					@include tb {
+						margin-right: 0;
+					}
+				}
+
+				p {
+					margin-block-start: 0;
+					margin-block-end: 0;
+					margin-inline-start: 0px;
+					margin-inline-end: 0px;
+					max-width: 400px;
+					font-size: $responsive__font;
+					--max-font: 20;
+					--min-font: 16;
+					margin: .5em 2em;
+					margin-left: auto;
+					margin-bottom: 1.5em;
+					opacity: .7;
+					@include tb {
+						margin-left: 0;
+						margin-top: 1em;
+						margin-bottom: 2em;
+					}
+					@include ml {
+						max-width: 300px;
+					}
+					@include ms {
+						max-width: 250px;
+					}
+				}
+				span {
+					background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+					background-origin: 0;
+					background-size: 200% 40%;
+					background-repeat: repeat-x;
+					background-position: -100% 100%;
+					transition: background-position 0.5s;
+					font-weight: $bold;
+				}
+				a {
+					font-family: $font;
+					color: black;
+					margin: 5em 3em;
+					background: #ffc600;
+					padding: 1em 2em;
+
+					//768px
+					@include tb {
+						margin-left: 0;
+					}
+					@include ml {
+						padding: .5em 1em;
+					}
+				}
+			}
+		}
+	}
+
+	.see__more {
+		margin-top: 4em;
+		
+		h1 {
+			margin-bottom: .5em;
+		}
+
+		.btn-github {
+			font-family: $font;
+			background: $github;
+			color: whitesmoke;
+   
+			padding: 1em 2em;
+			font-size: 16px;
+			margin: auto;
+			cursor: pointer;
+			margin-left: 6.8em;
+
+			@include lg {
+				margin-left: 4.9em;
+			}
+
+			@include tb {
+				margin-left: 3.6em;
+			}
+			@include ml {
+				margin-left: 2em;
+			}
+
+			@include mm {
+				margin-left: 1.7em;
+			}
+
+			@include ms {
+				margin-left: 1.5em;
+			}
+
+			a {
+			color:	whitesmoke;
+			}
+	
+			
+	
+			i {
+				margin-right: .4em;
+			}
+	
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}

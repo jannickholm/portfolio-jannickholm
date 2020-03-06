@@ -1,0 +1,45 @@
+section#counter-stats {
+	margin-top: 100px;
+	margin-bottom: 100px;
+	min-height: 30vh;
+	display: grid;
+	align-items: center;
+	background: url(https://images.unsplash.com/photo-1515595967223-f9fa59af5a3b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
+	background-attachment: fixed;
+	background-size: cover;
+	.row {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		.stats {
+			text-align: center;
+			font-size: 35px;
+			font-family: $font;
+
+			& > * {
+				margin-bottom: .4em;
+			}
+
+			h5 {
+				font-weight: $regular;
+				font-size: $responsive__font;
+				--max-font: 20;
+				--min-font: 16;
+			}
+
+			.fa {
+				color: #000;
+				font-size: 60px;
+			}
+
+			.counting {
+				font-weight: $bold;
+			}
+		}
+	}
+
+	@include ml {
+		display: none;
+	}
+}

@@ -1,0 +1,254 @@
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+body,
+html {
+	font-size: 16px;
+	background: white;
+	overflow-x: hidden;
+	// max-width: 1440px;
+	margin: auto;
+}
+
+// .absolute-centering {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+//     margin: auto;
+// }
+
+body {
+	background-color: $bd-color;
+
+	.contact__right {
+		position: fixed;
+		top: 50%;
+		left: 0;
+		transform-origin: center;
+		writing-mode: vertical-lr;
+		transform: rotate(180deg) translateY(50%);
+		height: auto;
+	}
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+#_progress {
+	--scroll: 0%;
+	background: linear-gradient(to right, #ffc600 var(--scroll), transparent 0);
+	position: fixed;
+	width: 100%;
+	height: 5px;
+	top: 0px;
+	z-index: 100;
+	margin-top: 4.8em;
+}
+
+footer {
+	width: 100vw;
+	min-height: 50vh;
+	background: #ece9e6; /* fallback for old browsers */
+	background: -webkit-linear-gradient(#ece9e6, #ffffff); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(
+		to top,
+		#ece9e6,
+		#ffffff
+	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin-top: 5em;
+	box-shadow: 0 1rem 2.8rem 0 rgba(0, 0, 0, .15);
+	font-family: $font;
+	padding: 2em;
+	padding-bottom: 0;
+	a {
+		color: whitesmoke;
+	}
+	@include ml {
+		padding: .5em;
+	}
+
+	@include mm {
+		padding: .5em;
+	}
+	span {
+		display: block;
+		width: max-content;
+	}
+
+	h1 {
+		font-family: $font;
+		font-weight: $regular;
+		font-size: $responsive__font;
+		--max-font: 70;
+		--min-font: 30;
+		text-transform: lowercase;
+		// width: 80vw;
+		margin: auto;
+		// line-height: .9;
+
+		span {
+			display: inline;
+			font-weight: $bold;
+		}
+
+		.half-bg {
+			background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+			background-origin: 0;
+			background-size: 200% 40%;
+			background-repeat: repeat-x;
+			background-position: -100% 100%;
+			transition: background-position 0.5s;
+		}
+	}
+
+	.contact {
+		margin: 1em 0em;
+		font-size: 20px;
+		cursor: pointer;
+		background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+		background-origin: 0;
+		background-size: 200% 40%;
+		background-repeat: repeat-x;
+		background-position: 0% 100%;
+		transition: background-position .5s;
+		i {
+			margin-right: .4em;
+		}
+		&:hover {
+			opacity: .8;
+			background-position: -100% 100%;
+			transition: background-position .5s;
+		}
+		a {
+			color: black;
+		}
+	}
+
+	.btn-linkedin {
+		background: $linkedin;
+		color: whitesmoke;
+		padding: 1em 2em;
+		margin: 1em 0em;
+		font-size: 16px;
+		margin: auto;
+		margin-bottom: 2em;
+		cursor: pointer;
+
+		@include mm {
+			margin-left: 0;
+		}
+
+		i {
+			margin-right: .4em;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	.btn-github {
+		background: $github;
+		color: whitesmoke;
+		padding: 1em 2em;
+		margin: 1em 0em;
+		font-size: 16px;
+		margin: auto;
+		margin-bottom: 2em;
+		cursor: pointer;
+
+		@include mm {
+			margin-left: 0;
+		}
+
+		i {
+			margin-right: .4em;
+		}
+
+		&:hover {
+			opacity: .8;
+		}
+	}
+
+	.by-line {
+		width: max-content;
+		max-width: 80%;
+		margin: auto;
+		font-size: 20px;
+		white-space: normal;
+		font-size: $responsive__font;
+		--max-font: 16;
+		--min-font: 16;
+
+		span {
+			display: inline;
+			font-weight: $bold;
+		}
+
+		.half-bg {
+			background-image: linear-gradient(to right, transparent 50%, #ffc600 50%);
+			background-origin: 0;
+			background-size: 200% 40%;
+			background-repeat: repeat-x;
+			background-position: -100% 100%;
+			transition: background-position 0.5s;
+		}
+
+		@include mm {
+			margin-left: 0;
+		}
+	}
+
+	.btns {
+		width: 35%;
+		display: flex;
+		flex-wrap: wrap;
+		margin: auto;
+		margin-top: auto;
+		
+		@include ml {
+			width: 70%;
+			margin: auto;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2em;
+		}
+
+		@include mm {
+			margin: 0;
+		}
+	}
+}
+
+.email {
+	position: fixed;
+	 bottom: 40px;
+	 right: 50px;
+	 background-color: #ffc600;
+	 width: 70px;
+	 height: 70px;
+	 border-radius: 50%;
+	 text-align: center;
+z-index: 99;
+	@include ml {
+		display: none;
+	}
+}
